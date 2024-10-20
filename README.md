@@ -77,7 +77,8 @@ CREATE TABLE table_name (
     column2 datatype constraints,
     ...
 );
-Example:
+
+**Example:**
 
 CREATE TABLE Employee (
     EmployeeID INT PRIMARY KEY,

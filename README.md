@@ -111,8 +111,6 @@ DROP COLUMN column_name;
 
 Modify a Column:
 
-sql
-
 ALTER TABLE table_name
 MODIFY column_name new_datatype;
 
@@ -130,8 +128,6 @@ ALTER TABLE Employee
 DROP COLUMN PhoneNumber;
 
 Modify the Salary column to allow NULL values:
-
-sql
 
 ALTER TABLE Employee
 
@@ -155,6 +151,25 @@ SELECT * FROM Employee
 
 WHERE HireDate > (SELECT HireDate FROM Employee ORDER BY Salary DESC LIMIT 1);
 
+# SQL README: Derived Tables
+
+## Overview
+Derived tables are temporary tables created within a SQL query. They are used to simplify complex queries by allowing you to perform calculations or aggregate data that can then be referenced in the main query. Derived tables are defined in the `FROM` clause of a query and are typically used in conjunction with `JOIN`, `SELECT`, and `WHERE` statements.
+
+## Key Features
+- **Temporary**: Derived tables exist only for the duration of the query and are not stored in the database.
+- **Readable**: They help break down complex queries into more manageable parts, improving readability and maintainability.
+- **Encapsulation**: Derived tables can encapsulate aggregate calculations, allowing you to treat them as if they were regular tables.
+
+## Syntax
+The basic syntax for creating a derived table is as follows:
+
+```sql
+SELECT column1, column2, ...
+FROM (SELECT sub_column1, sub_column2, ...
+      FROM sub_table
+      WHERE condition) AS derived_table_name
+WHERE additional_conditions;
 
 
 

@@ -94,3 +94,9 @@ SELECT * FROM EMPLOYEE;
 SELECT * FROM Employee
 WHERE HireDate > (SELECT HireDate FROM Employee ORDER BY Salary DESC LIMIT 1);
 
+##Derived Tables
+#Find Employees with Salary Greater Than the Average Salary Using a Derived Table
+SELECT E.*
+FROM Employee E, (SELECT AVG(Salary) AS AvgSalary FROM Employee) AS AvgSal
+WHERE E.Salary > AvgSal.AvgSalary;
+

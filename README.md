@@ -47,7 +47,6 @@ MODIFY column_name new_datatype;
 
 Add a new column to the Employee table:
 
-sql
 
 ALTER TABLE Employee
 
@@ -55,7 +54,6 @@ ADD PhoneNumber VARCHAR(15);
 
 Modify the Salary column to allow NULL values:
 
-sql
 
 ALTER TABLE Employee
 
@@ -100,15 +98,11 @@ Syntax:
 
 Add a Column:
 
-sql
-
 ALTER TABLE table_name
 
 ADD column_name datatype;
 
 Drop a Column:
-
-sql
 
 ALTER TABLE table_name
 
@@ -120,16 +114,15 @@ sql
 
 ALTER TABLE table_name
 MODIFY column_name new_datatype;
-Example:
-Add a new column to the Employee table:
 
-sql
+Example:
+
+Add a new column to the Employee table:
 
 ALTER TABLE Employee
 ADD PhoneNumber VARCHAR(15);
-Drop the PhoneNumber column from the Employee table:
 
-sql
+Drop the PhoneNumber column from the Employee table:
 
 ALTER TABLE Employee
 
@@ -144,6 +137,7 @@ ALTER TABLE Employee
 MODIFY Salary DECIMAL(10, 2) NULL;
 
 ## 3. SUBQUERIES
+
 A subquery is a query nested inside another query. It can be used in various clauses such as SELECT, WHERE, FROM, etc.
 
 Subqueries are used to retrieve data that will be used in the main query.
